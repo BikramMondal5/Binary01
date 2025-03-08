@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LearnEx || Learners Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <div class="navbar-content">
+          <!-- Logo -->
+          <div class="navbar-left">
+            <a href="#" class="logo">
+              <div class="icon"></div>
+            </a>
+            <p class="title">LearnEx</p>
+
+            <!-- Explore Dropdown -->
+            <div class="dropdown">
+              <button class="explore-btn dropdown-toggle">
+                Explore
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="chevron-down"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Online Degrees</a>
+                <a href="#" class="dropdown-item">Find your New Career</a>
+                <a href="#" class="dropdown-item">For Enterprise</a>
+                <a href="#" class="dropdown-item">For Universities</a>
+                <a href="#" class="dropdown-item">For Government</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Search Bar -->
+          <div class="search-container">
+            <form id="search-form">
+              <div class="search-wrapper">
+                <input
+                  type="text"
+                  placeholder="What do you want to learn?"
+                  class="search-input"
+                />
+                <button type="submit" class="search-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="search-icon"
+                  >
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="m21 21-4.3-4.3" />
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Right Navigation -->
+          <div class="navbar-right">
+            <a href="#" class="nav-link degrees-link">Degrees</a>
+            <a href="#" class="nav-link careers-link">Careers</a>
+
+            <!-- Language Selector -->
+            <div class="dropdown">
+              <button class="lang-btn dropdown-toggle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="globe-icon"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <path
+                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                  />
+                  <path d="M2 12h20" />
+                </svg>
+                <span class="lang-text">English</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="chevron-down"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a href="#" class="dropdown-item">English</a>
+                <a href="#" class="dropdown-item">Español</a>
+                <a href="#" class="dropdown-item">Français</a>
+                <a href="#" class="dropdown-item">Deutsch</a>
+                <a href="#" class="dropdown-item">中文</a>
+                <a href="#" class="dropdown-item">日本語</a>
+              </div>
+            </div>
+
+            <!-- Notifications -->
+            <button class="notification-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="bell-icon"
+              >
+                <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+                <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+              </svg>
+              <span class="notification-badge"></span>
+            </button>
+
+            <!-- User Profile -->
+            <div class="dropdown">
+              <button class="avatar-btn dropdown-toggle">
+                <div class="avatar">B</div>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a href="#" class="dropdown-item">My Profile</a>
+                <a href="#" class="dropdown-item">My Courses</a>
+                <a href="#" class="dropdown-item">Settings</a>
+                <a href="#" class="dropdown-item">Help Center</a>
+                <a href="#" class="dropdown-item">Log Out</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <h1 class="wlcm-heading">Welcome to LearnEx</h1>
+        <p class="wlcm-text">
+          Find the best courses and specializations from top universities and
+          industry leaders.
+        </p>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="{{ url_for('static',filename='script.js') }}"></script>
+  </body>
+</html>
