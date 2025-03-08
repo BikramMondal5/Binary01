@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LearnEx || Learners Dashboard</title>
+    <link
+      rel="stylesheet"
+      href=".\css\learners.css"
+    />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <div class="navbar-content">
+          <!-- Logo -->
+          <div class="navbar-left">
+            <a href="#" class="title-logo">
+              <div class="icon"></div>
+            </a>
+            <p class="title">LearnEx</p>
+
+            <!-- Explore Dropdown -->
+            <div class="dropdown">
+              <button class="explore-btn dropdown-toggle">
+                Explore
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="chevron-down"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Online Degrees</a>
+                <a href="#" class="dropdown-item">Find your New Career</a>
+                <a href="#" class="dropdown-item">For Enterprise</a>
+                <a href="#" class="dropdown-item">For Universities</a>
+                <a href="#" class="dropdown-item">For Government</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Search Bar -->
+          <div class="search-container">
+            <form id="search-form">
+              <div class="search-wrapper">
+                <input
+                  type="text"
+                  placeholder="What do you want to learn?"
+                  class="search-input"
+                />
+                <button type="submit" class="search-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="search-icon"
+                  >
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="m21 21-4.3-4.3" />
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Right Navigation -->
+          <div class="navbar-right">
+            <a href="#" class="nav-link degrees-link">Degrees</a>
+            <a href="#" class="nav-link careers-link">Careers</a>
+
+            <!-- Language Selector -->
+            <div class="dropdown">
+              <button class="lang-btn dropdown-toggle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="globe-icon"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <path
+                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                  />
+                  <path d="M2 12h20" />
+                </svg>
+                <span class="lang-text">English</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="chevron-down"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a href="#" class="dropdown-item">English</a>
+                <a href="#" class="dropdown-item">Español</a>
+                <a href="#" class="dropdown-item">Français</a>
+                <a href="#" class="dropdown-item">Deutsch</a>
+                <a href="#" class="dropdown-item">中文</a>
+                <a href="#" class="dropdown-item">日本語</a>
+              </div>
+            </div>
+
+            <!-- Notifications -->
+            <button class="notification-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="bell-icon"
+              >
+                <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+                <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+              </svg>
+              <span class="notification-badge"></span>
+            </button>
+
+            <!-- User Profile -->
+            <div class="dropdown">
+              <button class="avatar-btn dropdown-toggle">
+                <div class="avatar">B</div>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a href="#" class="dropdown-item">My Profile</a>
+                <a href="#" class="dropdown-item">My Courses</a>
+                <a href="#" class="dropdown-item">Settings</a>
+                <a href="#" class="dropdown-item">Help Center</a>
+                <a href="#" class="dropdown-item">Log Out</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <div class="wlcm-msg">
+          <h1 class="wlcm-heading">Welcome to LearnEx</h1>
+          <p class="wlcm-text">
+            Find the best courses and specializations from top universities and
+            industry leaders.
+          </p>
+        </div>
+        <div class="inner-container">
+          <div class="card">
+            <div class="logo"></div>
+            <div class="card-content">
+              <h3>Google Prompting Essentials</h3>
+              <p>Beginner · Course</p>
+              <a href="#">Google</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="logo"></div>
+            <div class="card-content">
+              <h3>Python for Everybody</h3>
+              <p>Beginner · Specialization</p>
+              <a href="#">University of Michigan</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="logo"></div>
+            <div class="card-content">
+              <h3>Prompt Engineering</h3>
+              <p>Beginner · Specialization</p>
+              <a href="#">Vanderbilt University</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="logo"></div>
+            <div class="card-content">
+              <h3>Python for Everybody</h3>
+              <p>Beginner · Specialization</p>
+              <a href="#">University of Michigan</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="logo"></div>
+            <div class="card-content">
+              <h3>Python for Everybody</h3>
+              <p>Beginner · Specialization</p>
+              <a href="#">University of Michigan</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="logo"></div>
+            <div class="card-content">
+              <h3>Python for Everybody</h3>
+              <p>Beginner · Specialization</p>
+              <a href="#">University of Michigan</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="logo"></div>
+            <div class="card-content">
+              <h3>Google Prompting Essentials</h3>
+              <p>Beginner · Course</p>
+              <a href="#">Google</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="logo"></div>
+            <div class="card-content">
+              <h3>Google Prompting Essentials</h3>
+              <p>Beginner · Course</p>
+              <a href="#">Google</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="logo"></div>
+            <div class="card-content">
+              <h3>Google Prompting Essentials</h3>
+              <p>Beginner · Course</p>
+              <a href="#">Google</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="logo"></div>
+            <div class="card-content">
+              <h3>Google Prompting Essentials</h3>
+              <p>Beginner · Course</p>
+              <a href="#">Google</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="logo"></div>
+            <div class="card-content">
+              <h3>Google Prompting Essentials</h3>
+              <p>Beginner · Course</p>
+              <a href="#">Google</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="logo"></div>
+            <div class="card-content">
+              <h3>Google Prompting Essentials</h3>
+              <p>Beginner · Course</p>
+              <a href="#">Google</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="logo"></div>
+            <div class="card-content">
+              <h3>Google Prompting Essentials</h3>
+              <p>Beginner · Course</p>
+              <a href="#">Google</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="logo"></div>
+            <div class="card-content">
+              <h3>Google Prompting Essentials</h3>
+              <p>Beginner · Course</p>
+              <a href="#">Google</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="logo"></div>
+            <div class="card-content">
+              <h3>Google Prompting Essentials</h3>
+              <p>Beginner · Course</p>
+              <a href="#">Google</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="freq-container">
+        <h1 class="faq-heading">Frequently Asked Questions(FAQs):</h1>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <div>What is LearnEx?</div>
+              <div class="icon"></div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                LearnEx is an educational platform that enables users to learn
+                various courses online, possibly in different subjects or
+                fields. It is an eco-friendly design to make learning accessible
+                and engaging.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <div>What payment methods do LearnEx accept?</div>
+              <div class="icon"></div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                LearnEx accepts major credit cards, debit cards and payment
+                gateways such as PayPal(or other specific methods you support)
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <div>How does LearnEx work?</div>
+              <div class="icon"></div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                Users can browse courses, enroll in the ones they are interested
+                in, and complete lessons at their own pace. First user will get
+                certificate upon completion and from second users onwards, they
+                will get a badge upon completion.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <div>Do I need any prior knowledge to enroll in a course?</div>
+              <div class="icon"></div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                Some courses may have prerequisites, which will be listed in the
+                course description. Others are designed for beginners and
+                require no prior knowledge.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <div>Can I access LearnEx courses on mobile devices?</div>
+              <div class="icon"></div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                Yes, LearnEx is optimized for mobile devices, and you can access
+                courses on smartphones or tablets through a web browser.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <div>What should I do if I encounter a technical issue?</div>
+              <div class="icon"></div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                If you face any technical issues, please contact our support
+                team at [LearnEx4144@gmail.com] or visit our help center for
+                troubleshooting guides.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Dropdown functionality
+        const dropdowns = document.querySelectorAll(".dropdown");
+
+        // Toggle dropdown on click
+        dropdowns.forEach((dropdown) => {
+          const toggle = dropdown.querySelector(".dropdown-toggle");
+          toggle.addEventListener("click", (e) => {
+            e.stopPropagation();
+
+            // Close all other dropdowns
+            dropdowns.forEach((otherDropdown) => {
+              if (otherDropdown !== dropdown) {
+                otherDropdown.classList.remove("active");
+              }
+            });
+
+            // Toggle current dropdown
+            dropdown.classList.toggle("active");
+          });
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener("click", () => {
+          dropdowns.forEach((dropdown) => {
+            dropdown.classList.remove("active");
+          });
+        });
+
+        // Prevent dropdown menu clicks from closing the dropdown
+        const dropdownMenus = document.querySelectorAll(".dropdown-menu");
+        dropdownMenus.forEach((menu) => {
+          menu.addEventListener("click", (e) => {
+            e.stopPropagation();
+          });
+        });
+
+        // Search form submission
+        const searchForm = document.getElementById("search-form");
+        searchForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const searchInput = searchForm.querySelector(".search-input");
+          const searchQuery = searchInput.value.trim();
+
+          if (searchQuery) {
+            console.log("Searching for:", searchQuery);
+            // In a real implementation, this would navigate to search results
+            alert(`Searching for: ${searchQuery}`);
+          }
+        });
+
+        // Make navbar responsive
+        function handleResponsive() {
+          const width = window.innerWidth;
+          const searchContainer = document.querySelector(".search-container");
+
+          if (width < 576) {
+            searchContainer.style.maxWidth = "150px";
+          } else if (width < 768) {
+            searchContainer.style.maxWidth = "200px";
+          } else {
+            searchContainer.style.maxWidth = "600px";
+          }
+        }
+
+        // Initial call and resize listener
+        handleResponsive();
+        window.addEventListener("resize", handleResponsive);
+
+        document.addEventListener("DOMContentLoaded", function () {
+          const faqQuestions = document.querySelectorAll(".faq-question");
+
+          faqQuestions.forEach((question) => {
+            question.addEventListener("click", () => {
+              const parent = question.parentElement;
+              const isActive = parent.classList.contains("active");
+
+              // Close all FAQs
+              document.querySelectorAll(".faq-item").forEach((item) => {
+                item.classList.remove("active");
+              });
+
+              // If the clicked one wasn't active, make it active
+              if (!isActive) {
+                parent.classList.add("active");
+              }
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+  <script src="learners.js"></script>
+</html>
